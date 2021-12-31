@@ -18,9 +18,13 @@ their medicines and allow pharmacies to order medicines in discount with deliver
   Webapp features:
 
  The proposed system or the web app has the following features.
+ 
     •	It has authorization feature that allow different users to manipulate data differently based on their role. The system has two 
         actors. The end user and the admin. 
+        
         The user has the following authorities: He can Read, add, delete and update orders in his dashboard.
-        The Admin has following authorities: Read, add, update and delete medicines                                         
+        
+        The Admin has following authorities: Read, add, update and delete medicines                 
+        
     •	The authentication feature has the following features: The user will be able to sign up, login and log out. The user can also delete 
         and update his account profile.
