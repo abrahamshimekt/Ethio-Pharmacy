@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto:wght@300;400&display=swap');
+/*.navbar-collapse {*/
+/*    justify-content: flex-end;*/
+/*}*/
+/*body {*/
+/*    background-color: #1c1b1b;*/
+/*    font-family: 'Poppins', sans-serif;*/
+/*}*/
+/*@media (min-width: 992px) {*/
+/*    .navbar-expand-lg .navbar-nav .nav-link {*/
+/*        padding-right: 2.5rem;*/
+/*        padding-left: 0.5rem;*/
+/*    }*/
+/*}*/
+/*.intro {*/
+/*    background-image: url('../../static/images/med1.jpg');*/
+/*    background-size: cover}*/
+
+h1 {
+    color: red;
+}
