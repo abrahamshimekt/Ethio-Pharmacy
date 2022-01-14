@@ -13,11 +13,13 @@
 
     <div class="container mt-5">
         <h1 class  = "text-white text-center">Categories</h1>
+        <p class = "text-center text-light add-message" th:unless = "${medicines} and ${medicines.size()}">
+            <i class="far fa-plus-square"></i>Please Add A Catagory</p>
         <div class="row">
-            <div th:each = "medicine: ${medicines}"  class="col mt-3">
-                <div class="col-sm">
+            <div th:each = "medicine: ${medicines}"  class="col-4 mt-5">
+                <div class="col-md">
                     <div class="card">
-                        <div style = "width: 100%; height: auto;">
+                        <div style = "width: 100%; ">
                             <div class="hovereffect">
                                 <img class="img-responsive" th:src = "@{/images/med1.jpg}" alt="">
                                 <div class="overlay">
@@ -28,8 +30,8 @@
                         </div>
 
                         <div class="card-body">
-                            <h5 th:text = "${medicine}" class="fw-bold card-title">Card title</h5>
-                            <p  class="card-text">Some make up the bulk of the card's content.</p>
+                            <h5 th:text = "${medicine.medName}" class="fw-bold card-title">Card title</h5>
+                            <p  th:text = "${medicine.medDescription}" class = "card-text">Some make up the bulk of the card's content.</p>
                         </div>
                     </div>
                 </div>

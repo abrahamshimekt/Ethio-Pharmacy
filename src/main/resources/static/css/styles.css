@@ -115,3 +115,10 @@ body {
 .card h5 {
     color: #a40303;
 }
+
+.add-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
