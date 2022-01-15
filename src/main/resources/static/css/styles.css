@@ -122,3 +122,17 @@ body {
     align-items: center;
 
 }
+
+.add-message p{
+    height: 30vh;
+    width: 50%;
+    margin :0 auto;
+    color: black;
+    border: 1px solid #fff;
+    display: flex;
+    opacity: 0.5;
+    align-items: center;
+    justify-content: center;
+
+
+}

@@ -13,8 +13,11 @@
 
     <div class="container mt-5">
         <h1 class  = "text-white text-center">Categories</h1>
-        <p class = "text-center text-light add-message" th:unless = "${medicines} and ${medicines.size()}">
-            <i class="far fa-plus-square"></i>Please Add A Catagory</p>
+        <div class="add-message" th:unless = "${medicines} and ${medicines.size()}">
+            <p class = "text-center text-light" >
+                <i class="far fa-plus-square"></i>Please Add A Catagory</p>
+        </div>
+
         <div class="row">
             <div th:each = "medicine: ${medicines}"  class="col-4 mt-5">
                 <div class="col-md">
