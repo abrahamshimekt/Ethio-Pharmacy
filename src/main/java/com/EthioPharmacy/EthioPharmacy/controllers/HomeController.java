@@ -5,7 +5,10 @@ import com.EthioPharmacy.EthioPharmacy.models.Medicine;
 import com.EthioPharmacy.EthioPharmacy.models.MedicineData;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 
 @Controller
@@ -23,15 +26,20 @@ public class HomeController {
     @GetMapping(path = "/add")
     public String displayAddForm(Model model) {
         model.addAttribute("title", "Add Medicine");
+        model.addAttribute( new Medicine());
         return "meds/addMedForm";
     }
 
     @PostMapping("/add")
-    public String processAddForm(@ModelAttribute Medicine newMed) {
+    public String processAddForm(@ModelAttribute @Valid  Medicine newMed, Errors errors, Model model) {
         // what modelAttribute does
         // Medicine newMed = new Medicine();
         // newMed.setName(Request.getParameter("name"))---> it will match the form name attr to the object attr
         // newmed.setDescription(Request.getParameter("description") --> >>        description       >>  >>
+        if(errors.hasErrors()) {
+            model.addAttribute("title", "Add Medicine");
+            return "meds/addMedForm";
+        }
         MedicineData.addMed(newMed);
         return "redirect:/home";
     }

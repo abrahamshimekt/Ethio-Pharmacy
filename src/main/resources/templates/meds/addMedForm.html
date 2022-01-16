@@ -4,19 +4,24 @@
 <body class = "bg-light">
 
     <div class="container add-form ">
-    <form method = "post"  class = "w-50 bg-light p-5 border rounded shadow p-3 mb-5 bg-white rounded mt-5">
+    <form method = "post"  th:object = "${medicine}" class = "w-50 bg-light p-5 border rounded shadow p-3 mb-5 bg-white rounded mt-5">
         <h1 class = "text-center">Add new Medicine</h1>
         <div class="form-group mt-5" >
-            <label for="medName" >Medicine Name:</label>
-            <input name = "medName" type="text" class="form-control mt-2" id="medName"  placeholder="Enter medicine Name"/>
+            <label th:for="medName" >Medicine Name:</label>
+            <input  class="form-control mt-2" th:field = "*{medName}"  placeholder="Enter medicine Name"/>
+            <span th:errors = "*{medName}" class = "erros"></span>
         </div>
         <div class="form-group mt-5">
-            <label for="medPrice" >Medicine Price:</label>
-            <input  name = "medPrice" type="text" class="form-control mt-2" id="medPrice"  placeholder="Enter medicine Price"/>
+            <label th:for="medPrice" >Medicine Price:</label>
+            <input  class="form-control mt-2" th:field = "*{medPrice}" placeholder="Enter medicine Price"/>
+            <span th:errors = "*{medPrice}" class = "erros"></span>
+
         </div>
         <div class="form-group mt-5">
-            <label for="medDesc" >Medicine Description:</label>
-            <textarea name = "medDescription" type="description" class="form-control mt-2" id="medDesc"  placeholder="Enter medicine Name"></textarea>
+            <label th:for="medDesc" >Medicine Description:</label>
+            <textarea  class="form-control mt-2" th:field = "*{medDescription}"  placeholder="Enter medicine Name"></textarea>
+            <span th:errors = "*{medDescription}" class = "erros"></span>
+
         </div>
         <p class = mt-5>Select the image</p>
 
