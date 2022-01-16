@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+   
+    <link th:href="@{/css/home.css}" rel="stylesheet">
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
+    <link th:href="@{/css/styles2.css}" rel="stylesheet">
+</head>
+<body>
+  <head th:replace="fragments :: head">
+    <header th:replace="fragment2 :: header"></header>
+    <div class="container-fluid intro mt-5">
+        <div class="container p-5">
+            <h1 class = "fw-bold" >Our Products</h1>
+        </div>
+    </div>
+    <div class="container category">
+      <h1>Categories</h1>
+    </div>
+    <div class="row ">
+      <div  class="col-10 mt-7  container " style="padding:20px">
+          <div class="row-md " style="padding:10px">
+              <div class="card">
+                  <div style = "width: 100%; ">
+                      <div class="hovereffect">
+                          <img class="img-responsive" th:src = "@{/images/med1.jpg}" alt="">
+                          <div class="overlay">
+                              <h2>Hover effect 2</h2>
+                              <a class="info" href="#">link here</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="card-body">
+                      <h5 class="fw-bold card-title">Card title</h5>
+                      <p  class = "card-text">Some make up the bulk of the card's content.</p>
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="col-md"style="padding:10px">
+            <div class="card">
+                <div style = "width: 100%; ">
+                    <div class="hovereffect">
+                        <img class="img-responsive" th:src = "@{/images/med1.jpg}" alt="">
+                        <div class="overlay">
+                            <h2>Hover effect 2</h2>
+                            <a class="info" href="#">link here</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold card-title">Card title</h5>
+                    <p  class = "card-text">Some make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md" style="padding:10px">
+          <div class="card">
+              <div style = "width: 100%; ">
+                  <div class="hovereffect">
+                      <img class="img-responsive" th:src = "@{/images/med1.jpg}" alt="">
+                      <div class="overlay">
+                          <h2>Hover effect 2</h2>
+                          <a class="info" href="#">link here</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="card-body">
+                  <h5 class="fw-bold card-title">Card title</h5>
+                  <p  class = "card-text">Some make up the bulk of the card's content.</p>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md"style="padding:10px">
+        <div class="card">
+            <div style = "width: 100%; ">
+                <div class="hovereffect">
+                    <img class="img-responsive" th:src = "@{/images/med1.jpg}" alt="">
+                    <div class="overlay">
+                        <h2>Hover effect 2</h2>
+                        <a class="info" th:href="@{/medicine}">Diabetes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <h5 class="fw-bold card-title">Dibetes</h5>
+                <p  class = "card-text">Some make up the bulk of the card's content.</p>
+            </div>
+        </div>
+    </div>
+      </div>
+  </div>
+  </div>
+  
+  <footer class="bg-dark text-center text-white" style="margin-top: 5rem;">
+    <div class="container p-4 pb-0">
+
+      <section class="">
+        <form action="">
+          <div class="row d-flex justify-content-center">
+  
+            <div class="col-md-5 col-12">
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="form5Example29" class="form-control" />
+                <label class="form-label" for="form5Example29">Email address</label>
+              </div>
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-outline-light mb-4">
+                Subscribe
+              </button>
+            </div>
+
+          </div>
+    
+        </form>
+      </section>
+ 
+    </div>
+
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+    </div>
+  </footer>
+</body>
+</html>

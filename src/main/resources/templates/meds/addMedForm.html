@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org/">
+<head th:replace = "fragments :: head"></head>
+<body class = "bg-light">
+
+    <h1 class = "text-light text-center m-5" th:text = "${title}">Default </h1>
+    <div class="container add-form ">
+    <form method = "post" class = "w-50 bg-light p-5 border border-info rounded">
+        <div class="form-group mt-5" >
+            <label for="medName" >Medicine Name:</label>
+            <input name = "medName" type="text" class="form-control mt-2" id="medName"  placeholder="Enter medicine Name"/>
+        </div>
+        <div class="form-group mt-5">
+            <label for="medPrice" >Medicine Price:</label>
+            <input  name = "medPrice" type="text" class="form-control mt-2" id="medPrice"  placeholder="Enter medicine Price"/>
+        </div>
+        <div class="form-group mt-5">
+            <label for="medDesc" >Medicine Description:</label>
+            <textarea name = "medDescription" type="description" class="form-control mt-2" id="medDesc"  placeholder="Enter medicine Name"></textarea>
+        </div>
+        <p class = mt-5>Select the image</p>
+
+
+        <input class="btn btn-primary mt-2" type="submit" value="ADD"/>
+
+
+
+    </form>
+    </div>
+
+</body>
+</html>

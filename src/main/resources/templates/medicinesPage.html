@@ -1,0 +1,151 @@
+<html lang = "en"  xmlns:th = "http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap"
+        rel="stylesheet"/>
+  <title>Title</title>
+  <link rel="stylesheet" th:href= "@{/css/bootstrap.min.css}">
+  <link rel="stylesheet" th:href="@{/css/medicine.css}">
+  <link rel="stylesheet" th:href= "@{/css/styles2.css}">
+
+</head>
+<body>
+  <header th:replace="fragment2 :: header"></header>
+  <div class="container" style="width:50%">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" th:src="@{/images/med1.jpg}" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" th:src="@{/images/med2.jpg}" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" th:src="@{/images/med3.jpg}" alt="Third slide">
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <section class="bg-dark d-flex justify-content-center h-200 min-vh-200">
+  <div class="container">
+    <div class="row gy-2">
+      <div class=" custom col-lg-3 col-md-6">
+        <div class="box bg-dark h-100 d-flex p-4 flex-column text-white" >
+          <h5 class="card-title" >Acetaminophen.</h5>
+          <img class="card-img-top" th:src="@{/images/med1.jpg}" alt="Card image cap">
+          <p class="card-text" >price:43$</p>
+          <p class="card-text">Lorem ipsum dolor sit amet.</p>
+          <a href="#" class="btn mt-auto btn-primary">
+            <button type="button" >Add to Cart</button>
+          </a>
+        </div>
+      </div>
+
+      <div class=" custom col-lg-3 col-md-4">
+        <div class="box bg-dark h-100 d-flex p-4 flex-column text-white">
+          <h5 class="card-title">Adderall.</h5>
+          <img class="card-img-top" th:src="@{/images/med2.jpg}"  alt="Card image cap">
+          <p class="card-text">567$</p>
+          <p class="card-text">Lorem ipsum dolor sit amet.</p>
+       
+          <a href="#" class="btn mt-auto btn-primary">
+            <button type="button" >Add to Cart</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="custom col-lg-3 col-md-4">
+        <div class="box bg-dark h-100 d-flex p-4 flex-column text-white">
+          <h5 class="card-title">Amitriptyline</h5>
+          <img class="card-img-top" th:src="@{/images/med3.jpg}"  alt="Card image cap">
+          <p class="card-text">price:43$.</p>
+          <p class="card-text">Lorem ipsum dolor sit amet.</p>
+       
+          <a href="#" class="btn mt-auto btn-primary">
+            <button type="button" >Add to Cart</button>
+          </a>
+        </div>
+      </div>
+      <div class=" custom col-lg-3 col-md-4">
+        <div class="box bg-dark h-100 d-flex p-4 flex-column text-white">
+          <h5 class="card-title">Amlodipine</h5>
+          <img class="card-img-top" th:src="@{/images/med4.jpg}"  alt="Card image cap">
+          <p class="card-text">price:43$.</p>
+          <p class="card-text">Lorem ipsum dolor sit amet.</p>
+       
+          <a href="#" class="btn mt-auto btn-primary">
+            <button type="button" >Add to Cart</button>
+          </a> 
+        </div>
+      </div>
+      <div class="custom col-lg-3 col-md-4">
+        <div class="box bg-dark h-100 d-flex p-4 flex-column text-white">
+          <h5 class="card-title">Amoxicillin</h5>
+          <img class="card-img-top" th:src="@{/images/med6.jpg}"  alt="Card image cap">
+          <p class="card-text">price:43$.</p>
+          <p class="card-text">Lorem ipsum dolor sit amet.</p>
+       
+          <a href="#" class="btn mt-auto btn-primary">
+            <button type="button" >Add to Cart</button>
+          </a> 
+        </div>
+      </div>
+      <div class="custom col-lg-3 col-md-4">
+        <div class="box bg-dark h-100 d-flex p-4 flex-column text-white">
+          <h5 class="card-title">Ativan</h5>
+          <img class="card-img-top" th:src="@{/images/med5.jpg}"  alt="Card image cap">
+          <p class="card-text">price:43$.</p>
+          <p class="card-text">Lorem ipsum dolor sit amet.</p>
+       
+          <a href="#" class="btn mt-auto btn-primary">
+            <button type="button" >Add to Cart</button>
+          </a> 
+        </div>
+
+      </div>
+      <div class="custom col-lg-3 col-md-4">
+        <div class="box bg-dark h-100 d-flex p-4 flex-column text-white">
+          <h5 class="card-title">Atorvastatin</h5>
+          <img class="card-img-top" th:src="@{/images/med3.jpg}" alt="Card image cap">
+          <p class="card-text">price: 34$</p>
+          <p class="card-text">Lorem ipsum dolor sit amet.</p>
+       
+          <a href="#" class="btn mt-auto btn-primary">
+            <button type="button" >Add to Cart</button>
+          </a> 
+        </div>
+      </div>
+
+      <div class="custom col-lg-3 col-md-4">
+        <div class="box bg-dark h-100 d-flex p-4 flex-column text-white">
+          <h5 class="card-title">Azithromycin</h5>
+          <img class="card-img-top" th:src="@{/images/med1.jpg}" alt="Card image cap">
+          <p class="card-text">price:23$</p>
+          <p class="card-text">Lorem ipsum dolor sit amet.</p>
+       
+        <a href="#" class="btn mt-auto btn-primary">
+          <button type="button" >Add to Cart</button>
+        </a> 
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="footer">
+    <footer class="text-center text-white" style="background-color: #f1f1f1;">
+      
+      <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright:
+    
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+  </div>
+</body>
+</html>
+      
+     
+
+

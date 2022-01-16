@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "en"  xmlns:th = "http://www.thymeleaf.org/">
+<head th:fragment = "head">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap"
+            rel="stylesheet"/>
+    <title>Title</title>
+    <link rel="stylesheet" th:href= "@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href= "@{/css/styles2.css}">
+    
+</head>
+<body>
+  <header th:fragment="header" class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Ethio-Pharmacy</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Diabetes</a></li>
+                  <li><a class="dropdown-item" href="#">STDs</a></li>
+                  <li><a class="dropdown-item" href="#"> Eye Care</a></li>
+                  <li><a class="dropdown-item" href="#">Habesha</a></li>
+          
+                </ul>
+              </li>
+            </ul>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                
+              <button class="btn login" type="button"><img src="https://img.icons8.com/external-bearicons-flat-bearicons/64/000000/external-sign-up-call-to-action-bearicons-flat-bearicons-1.png"/><a th:href="@{/login}">SignIn/SignUp</a></button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+  <script type = "text/javascript" th:src = "@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

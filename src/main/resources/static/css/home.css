@@ -1,0 +1,9 @@
+.container{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+
+
+}
+.cards{
+    margin-top:5rem;
+}
