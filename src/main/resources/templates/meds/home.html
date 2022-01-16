@@ -15,7 +15,7 @@
         <h1 class  = "text-white text-center">Categories</h1>
         <div class="add-message" th:unless = "${medicines} and ${medicines.size()}">
             <p class = "text-center text-light" >
-                <i class="far fa-plus-square"></i>Please Add A Catagory</p>
+                <a th:href = "@{home/add}"> <i class="fa-3x m-4 far fa-plus-square"></i> </a>Please Add A Catagory</p>
         </div>
 
         <div class="row">

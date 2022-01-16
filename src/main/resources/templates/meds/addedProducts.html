@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace = "fragments :: head">
+
+</head>
+<body class = "bg-light">
+    <div class="container shadow p-3 mb-5 bg-white rounded mt-5">
+        <h1>Added Products</h1>
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each = "medicine: ${medicines}">
+                    <td th:text = "${medicine.medName}"></td>
+                    <td th:text = "${medicine.medPrice}"></td>
+                    <td th:text = "${medicine.medDescription}"></td>
+
+                    <td>
+                        <form method = "post">
+                            <input type = "checkbox" name="medIds" th:value = "${medicine.medId}" th:id = "${medicine.medId}"/>
+                            <label th:for = "${medicine.medId}" ><i class="w-100 fas fa-trash-alt"></i></label>
+                        </form>
+
+                     </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>
