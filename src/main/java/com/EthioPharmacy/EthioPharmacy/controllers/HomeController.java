@@ -9,6 +9,12 @@ public class HomeController {
     public String showHome(){
         return "home";
     }
+    @GetMapping("/")
+    public String redirectHome(){
+        return "home";
+    }
+   
+    
 
     
 }
