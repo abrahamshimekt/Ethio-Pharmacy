@@ -45,12 +45,14 @@ public class HomeController {
         return "meds/addedProducts";
     }
 
-    @PostMapping("/removeProduct")
+
+
+    @PostMapping("/addedProduct")
     public String processRemovedProduct(@RequestParam int[] medIds) {
         for(int medId : medIds) {
             MedicineData.removeMed(medId);
         }
-        return "meds/addedProducts";
+        return "redirect:addedProduct";
     }
 
 

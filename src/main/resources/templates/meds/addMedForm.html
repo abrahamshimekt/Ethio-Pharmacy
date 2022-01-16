@@ -3,9 +3,9 @@
 <head th:replace = "fragments :: head"></head>
 <body class = "bg-light">
 
-    <h1 class = "text-light text-center m-5" th:text = "${title}">Default </h1>
     <div class="container add-form ">
-    <form method = "post" class = "w-50 bg-light p-5 border border-info rounded">
+    <form method = "post"  class = "w-50 bg-light p-5 border rounded shadow p-3 mb-5 bg-white rounded mt-5">
+        <h1 class = "text-center">Add new Medicine</h1>
         <div class="form-group mt-5" >
             <label for="medName" >Medicine Name:</label>
             <input name = "medName" type="text" class="form-control mt-2" id="medName"  placeholder="Enter medicine Name"/>
