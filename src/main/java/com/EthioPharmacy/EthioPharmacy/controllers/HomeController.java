@@ -5,11 +5,7 @@ import com.EthioPharmacy.EthioPharmacy.models.Medicine;
 import com.EthioPharmacy.EthioPharmacy.models.MedicineData;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
+import org.springframework.web.bind.annotation.*;
 
 
 @Controller
@@ -31,11 +27,12 @@ public class HomeController {
     }
 
     @PostMapping("/add")
-    public String processAddForm(@RequestParam String medName, @RequestParam String medPrice, @RequestParam String medDescription) {
-        Medicine newMed = new Medicine( medName, medPrice, medDescription);
+    public String processAddForm(@ModelAttribute Medicine newMed) {
+        // what modelAttribute does
+        // Medicine newMed = new Medicine();
+        // newMed.setName(Request.getParameter("name"))---> it will match the form name attr to the object attr
+        // newmed.setDescription(Request.getParameter("description") --> >>        description       >>  >>
         MedicineData.addMed(newMed);
-
-
         return "redirect:/home";
     }
 
