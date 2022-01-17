@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto:wght@300;400&display=swap');
+.navbar-collapse {
+   justify-content: flex-end;
+}
+body {
+   background-color: #1c1b1b;
+   font-family: 'Poppins', sans-serif;
+}
+/* @media (min-width: 992px) {
+   .navbar-expand-lg .navbar-nav .nav-link {
+       padding-right: 2.5rem;
+       padding-left: 0.5rem;
+   }
+} */
+.intro {
+  background-size: cover;
+}
+.header{
+    padding: 30px;
+}
+
+.login a{
+    text-decoration: none;
+    color:#fff;
+
+}
+.category{
+    color:#fff;
+    padding-top:5em;
+}
+
+.login img{
+    width: 20%;
+}
+
+
+.carousel-item{
+    height:20rem;
+    
+}
+.carousel-item img{
+    object-fit: cover;
+    width:100%;
+    object-position: 0% -40%;
+
+}
+.cards{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    padding-top:10px;
+}
