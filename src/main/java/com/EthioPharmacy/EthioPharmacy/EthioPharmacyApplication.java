@@ -14,14 +14,9 @@ public class EthioPharmacyApplication {
 		SpringApplication.run(EthioPharmacyApplication.class, args);
 	}
 
-	@Controller
-	@RequestMapping( path = "/home")
+
 	public static class HomeController {
 
-		@GetMapping("/")
-		public String showHome(Model model) {
-
-			return "index";
-		}
+		
 	}
 }
