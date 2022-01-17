@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#">Ethio-Pharmacy</a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" th:href="@{/home}">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Product
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <section class="h-100 bg-dark">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col">
+            <div class="card card-registration my-4">
+              <div class="row g-0">
+                <div class="col-xl-6 d-none d-xl-block">
+                  <img
+                          th:src="@{/images/med1.jpg}"
+                          alt="Sample photo"
+                          class="img-fluid"
+                          style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;"
+                  />
+                </div>
+                <div class="col-xl-6">
+                  <div class="card-body p-md-5 text-black">
+                    <h3 class="mb-5 text-uppercase">Sign Up</h3>
+                    <div th:if="${param.success}">
+                      <div class="alert alert-info"> you have successfully singed up </div>
+                      <a class="btn btn-primary btn-lg ms-2" th:href="@{/login}">Signin</a>
+                    </div>
+                    <form th:action="@{/signup}" method="post" th:object ="${user}">
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input type="text" id="firstName" th:field="*{firstName}" class="form-control form-control-lg" />
+                          <label class="form-control" for="firstName" required autofocus="autofocus">First name</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input type="text"  th:field="*{lastName}" id="lastName" class="form-control form-control-lg" />
+                          <label class="form-control" for="lastName" required autofocus="autofocus">Last name</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-outline mb-4">
+                      <input type="text" id="address" th:field="*{address}"  class="form-control form-control-lg" />
+                      <label class="form-control" for="address" required autofocus="autofocus">Address</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                      <input type="email" id="email"  th:field="*{email}" class="form-control form-control-lg" />
+                      <label class="form-control" for="email" required autofocus="autofocus">Email</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <input type="text" id="phone"  th:field="*{phone}" class="form-control form-control-lg" />
+                      <label class="form-control" for="phone" required autofocus="autofocus">Phone</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <input type="text" id="company"  th:field="*{company}" class="form-control form-control-lg" />
+                      <label class="form-control" for="company" required autofocus="autofocus">Company</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <input type="text" id="userName"  th:field="*{userName}"  class="form-control form-control-lg" />
+                      <label class="form-control" for="userName" required autofocus="autofocus">userName</label>
+                    </div>
+                      <div class="form-outline mb-4">
+                        <input type="password" id="password"  th:field="*{password}" class="form-control form-control-lg" />
+                        <label class="form-control" for="password" required autofocus="autofocus">password</label>
+                      </div>
+
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-success btn-lg ms-2">Signup</button>
+                    </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <footer class="text-center text-white" style="background-color: #f1f1f1;">
+      
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2022 Copyright:
+      
+        </div>
+        <!-- Copyright -->
+      </footer>
+     <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

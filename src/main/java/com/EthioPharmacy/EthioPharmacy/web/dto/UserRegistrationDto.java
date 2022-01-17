@@ -1,10 +1,5 @@
 package com.EthioPharmacy.EthioPharmacy.web.dto;
-
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-
 @Data
 public class UserRegistrationDto {
     private String firstName;
