@@ -25,7 +25,7 @@ public class SignupController {
     @PostMapping
     public String registerUserAccount(@ModelAttribute("user") UserRegistrationDto registrationDto){
         userService.save(registrationDto);
-        return "redirect:/registration?success";
+        return "redirect:/meds/login?success";
     }
     @GetMapping
     public String showSignUpPage() {

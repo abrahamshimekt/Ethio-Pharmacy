@@ -47,19 +47,19 @@
                       <div class="row">
                         <div class="col-md-6 mb-4">
                           <div class="form-outline">
-                           <form th:action="@{/signup}" method="post" th:object="${user}" class= "needs-validation" novalidate></form>
+                           <form th:action="@{meds/signup}" method="post" th:object="${user}" class= "needs-validation" novalidate></form>
                           </div>
                           <div class="col-md-6 mb-4">
                             <div class="form-outline">
-                              <input type="text" id="form3Example1n" th:field="*{firstName}" class="form-control form-control-lg" required autofocus= "autofocus"/>
-                              <label class="form-label" for="form3Example1n">FirstName</label>
+                              <input type="text" id="form3Example1" th:field="*{firstName}" class="form-control form-control-lg" required autofocus= "autofocus"/>
+                              <label class="form-label" for="form3Example1">FirstName</label>
                             </div>
                           </div>
                         </div>
                         <div class="col-md-6 mb-4">
                           <div class="form-outline">
-                            <input type="text" id="form3Example1n" th:field="*{lastName}" class="form-control form-control-lg" />
-                            <label class="form-label" for="form3Example1n">LastName</label>
+                            <input type="text" id="form3Example2" th:field="*{lastName}" class="form-control form-control-lg" />
+                            <label class="form-label" for="form3Example2">LastName</label>
                           </div>
                         </div>
                       </div>
@@ -84,23 +84,23 @@
                       </div>
       
                       <div class="form-outline mb-4">
-                        <input type="text" id="form3Example9" th:field="*{company}" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example9">Company</label>
+                        <input type="text" id="form3Example5" th:field="*{company}" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example5">Company</label>
                       </div>
       
                       <div class="form-outline mb-4">
-                        <input type="text" id="form3Example90" th:field="*{zipCode}" class="form-control form-control-lg" />
+                        <input type="text" id="form3Example90" th:field="*{phone}" class="form-control form-control-lg" />
                         <label class="form-label" for="form3Example90">phone</label>
                       </div>
 
       
                       <div class="form-outline mb-4">
-                        <input type="text" id="form3Example97" th:field="*{email}" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example97">Email</label>
+                        <input type="text" id="form3Example7" th:field="*{email}" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example7">Email</label>
                       </div>
                       <div class="form-outline mb-4">
-                        <input type="text" id="form3Example97" th:field="*{phone}" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example97">password</label>
+                        <input type="text" id="form3Example9" th:field="*{password}" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example9">password</label>
                       </div>
       
                       <div class="d-flex justify-content-end pt-3">
@@ -116,6 +116,7 @@
           <div th:if="$(param.success}">
             <div class="alert alert-info"> you have successfully signed up</div>
           </div>
+        </div>
         </div>
       </section>
       <footer class="text-center text-white" style="background-color: #f1f1f1;">
