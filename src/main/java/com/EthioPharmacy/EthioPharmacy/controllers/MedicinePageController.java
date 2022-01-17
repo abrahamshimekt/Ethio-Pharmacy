@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MedicinePageController {
     @GetMapping("/medicine")
     public String showMedicine(){
-        return "medicinesPage";
+        return "medicines";
     }
     
 }

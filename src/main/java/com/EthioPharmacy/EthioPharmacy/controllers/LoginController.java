@@ -10,20 +10,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class LoginController {
-    @RequestMapping(value="/login",method=RequestMethod.GET)
+    @RequestMapping(value="/login")
     public String getLoginFrom() {
         return "login";
     }
 
-    @RequestMapping(value ="/login",method=RequestMethod.POST)
-    public String Login(@ModelAttribute(name="User") User loginForm,Model model){
-        String username = loginForm.getUserName();
-        String password = loginForm.getPassword();
-        if ("admin".equals(username) && "admin".equals(password)){
-            return "meds/adminDashBoard";
-        }
-        return "login";
-    }
     }
     
 
