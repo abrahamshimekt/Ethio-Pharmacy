@@ -14,9 +14,13 @@ import javax.persistence.Table;
 import javax.persistence.JoinColumn;
 import javax.persistence.UniqueConstraint;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name="User",uniqueConstraints = @UniqueConstraint(columnNames="email"))
 public class User {
     @Id
@@ -32,7 +36,7 @@ public class User {
     private String password;
     @ManyToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
     @JoinTable(name = "users_roles",joinColumns = @JoinColumn(name ="user_id", referencedColumnName ="id"),inverseJoinColumns = @JoinColumn(name = "role_id",referencedColumnName="id"))
-    private Collection<Role> roles;
+    private Collection<Role> roles; 
 
     
 }

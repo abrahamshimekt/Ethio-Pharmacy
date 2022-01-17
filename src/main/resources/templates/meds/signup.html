@@ -39,25 +39,26 @@
             <div class="col">
               <div class="card card-registration my-4">
                 <div class="row g-0">
-                  <div class="col-xl-6">
+                  <div class="col-xl-6" >
                     <div class="card-body p-md-5 text-black">
+
                       <h3 class="mb-5 text-uppercase">Sign Up</h3>
       
                       <div class="row">
                         <div class="col-md-6 mb-4">
                           <div class="form-outline">
-                           <form class= "needs-validation" novalidate></form>
+                           <form th:action="@{/signup}" method="post" th:object="${user}" class= "needs-validation" novalidate></form>
                           </div>
                           <div class="col-md-6 mb-4">
                             <div class="form-outline">
-                              <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                              <input type="text" id="form3Example1n" th:field="*{firstName}" class="form-control form-control-lg" required autofocus= "autofocus"/>
                               <label class="form-label" for="form3Example1n">FirstName</label>
                             </div>
                           </div>
                         </div>
                         <div class="col-md-6 mb-4">
                           <div class="form-outline">
-                            <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                            <input type="text" id="form3Example1n" th:field="*{lastName}" class="form-control form-control-lg" />
                             <label class="form-label" for="form3Example1n">LastName</label>
                           </div>
                         </div>
@@ -65,11 +66,9 @@
       
                       <div class="row">
                       <div class="form-outline mb-4">
-                        <input type="text" id="form3Example8" class="form-control form-control-lg" />
+                        <input type="text" id="form3Example8" th:field="*{address}" class="form-control form-control-lg" />
                         <label class="form-label" for="form3Example8">Address</label>
                       </div>
-      
-              
       
                       <div class="row">
                         <div class="col-md-6 mb-4">
@@ -82,40 +81,30 @@
                           </select>
       
                         </div>
-                        <div class="col-md-6 mb-4">
-      
-                          <select class="select">
-                            <option value="1">City</option>
-                            <option value="2">Addis Ababa</option>
-                            <option value="3">Butajira</option>
-                            <option value="4">Gonder</option>
-                          </select>
-      
-                        </div>
                       </div>
       
                       <div class="form-outline mb-4">
-                        <input type="text" id="form3Example9" class="form-control form-control-lg" />
+                        <input type="text" id="form3Example9" th:field="*{company}" class="form-control form-control-lg" />
                         <label class="form-label" for="form3Example9">Company</label>
                       </div>
       
                       <div class="form-outline mb-4">
-                        <input type="text" id="form3Example90" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example90">zip code</label>
+                        <input type="text" id="form3Example90" th:field="*{zipCode}" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example90">phone</label>
                       </div>
 
       
                       <div class="form-outline mb-4">
-                        <input type="text" id="form3Example97" class="form-control form-control-lg" />
+                        <input type="text" id="form3Example97" th:field="*{email}" class="form-control form-control-lg" />
                         <label class="form-label" for="form3Example97">Email</label>
                       </div>
                       <div class="form-outline mb-4">
-                        <input type="text" id="form3Example97" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example97">Phone</label>
+                        <input type="text" id="form3Example97" th:field="*{phone}" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example97">password</label>
                       </div>
       
                       <div class="d-flex justify-content-end pt-3">
-                        <button type="button" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                        <button type="button" class="btn btn-warning btn-lg ms-2">signUp</button>
                       </div>
       
                     </div>
@@ -123,6 +112,9 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div th:if="$(param.success}">
+            <div class="alert alert-info"> you have successfully signed up</div>
           </div>
         </div>
       </section>
