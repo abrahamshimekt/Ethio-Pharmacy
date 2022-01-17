@@ -1,8 +1,8 @@
 
-#Ethio-Pharmacy
+# -Ethio-Pharmacy
 
 
-  ##Members Name           ##ID                  ##Section
+  Members Name           ID                  Section
  1. Feven Belay         UGR/3979/12              1
  2. Abraham Shimekt     UGR/0129/12              1
  3. Rut Birhanu         UGR/8243/12              3
