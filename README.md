@@ -1,4 +1,4 @@
-# ICOG-Abe-and-Bam
+
 #Ethio-Pharmacy
 # Requirements to run the source code
 1. Use Intellij idea or vs code
@@ -22,9 +22,6 @@ The user has the following authorities: He can Read, add, delete and update orde
 The Admin has following authorities: Read, add, update and delete medicines
 
 • The authentication feature has the following features: The user will be able to sign up, login and log out. The user can also delete and update his account profile.
-#Group Members
-1. Abraham Shimekt  shimektabraham@gmail.com 0901195602
-2. Bamlaku Hiruy    bamlakuhiruya@gmail.com  0946461157
 
 
 
