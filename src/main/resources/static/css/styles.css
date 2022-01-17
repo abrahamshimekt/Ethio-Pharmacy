@@ -1,3 +1,8 @@
+html{
+    --main-color:rgb(46, 150, 136);
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto:wght@300;400&display=swap');
 
 
@@ -5,7 +10,8 @@
     justify-content: flex-end;
 }
 body {
-    background-color: rgba(27, 27, 27);
+    background-color:white;
+
     font-family: 'Poppins', sans-serif;
 }
 @media (min-width: 992px) {
@@ -32,7 +38,7 @@ body {
     overflow: hidden;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(153, 240, 136, 0.6);
     opacity: 0;
     filter: alpha(opacity=0);
     -webkit-transform: translate(460px, -100px) rotate(180deg);
@@ -56,7 +62,7 @@ body {
     position: relative;
     font-size: 17px;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(153, 240, 136, 0.6);
 }
 
 .hovereffect a.info {
@@ -112,7 +118,7 @@ body {
     background-position-y: 100%;
 }
 .card h5 {
-    color: #a40303;
+    color: rgb(38, 231, 173);
 }
 
 .add-form {
@@ -126,18 +132,13 @@ body {
     height: 30vh;
     width: 50%;
     margin :0 auto;
-    color: black;
+    color: rgb(250, 165, 165);
     border: 1px solid #fff;
     display: flex;
     opacity: 0.5;
     align-items: center;
     justify-content: center;
 
-
-}
-
-.erros {
-    color: red;
 
 }
 

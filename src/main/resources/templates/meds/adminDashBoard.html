@@ -3,7 +3,6 @@
 <head th:replace="fragments :: head"></head>
 
 <body>
-    <header th:replace="fragments :: header"></header>
     <div class="container-fluid intro mt-5">
         <div class="container p-5">
             <h1 class = "fw-bold" th:text = "${title}"></h1>
@@ -15,7 +14,7 @@
         <h1 class  = "text-white text-center">Categories</h1>
         <div class="add-message" th:unless = "${medicines} and ${medicines.size()}">
             <p class = "text-center text-light" >
-                <a th:href = "@{home/add}"> <i class="fa-3x m-4 far fa-plus-square"></i> </a>Please Add A Catagory</p>
+                <a th:href = "@{adminDashBoard/add}"> <i class="fa-3x m-4 far fa-plus-square"></i> </a>Please Add A Catagory</p>
         </div>
 
         <div class="row">

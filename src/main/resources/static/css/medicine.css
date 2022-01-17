@@ -1,0 +1,27 @@
+html{
+    --main-color:rgb(46, 150, 136);
+}
+
+.container{
+    background-color: var(--main-color);
+    padding-top:2vw;
+    border:2px rgb(121, 121, 216) solid; 
+    height:fit-content;
+}
+.btn{
+    background-color: var(--main-color);
+    border:solid var(--main-color);
+}
+.form{
+    width:20%;
+    padding:10px;
+}
+.footer{
+    margin-top:5em;
+}
+.custom img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
