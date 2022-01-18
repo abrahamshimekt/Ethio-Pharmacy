@@ -38,7 +38,7 @@ body {
     overflow: hidden;
     top: 0;
     left: 0;
-    background-color: rgba(153, 240, 136, 0.6);
+    background-color: rgba(27, 163, 163, 0.856);
     opacity: 0;
     filter: alpha(opacity=0);
     -webkit-transform: translate(460px, -100px) rotate(180deg);
@@ -62,7 +62,7 @@ body {
     position: relative;
     font-size: 17px;
     padding: 10px;
-    background: rgba(153, 240, 136, 0.6);
+    background:rgba(27, 163, 163, 0.856) ;
 }
 
 .hovereffect a.info {

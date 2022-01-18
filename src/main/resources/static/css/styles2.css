@@ -53,3 +53,10 @@ body {
     grid-template-columns: repeat(4,1fr);
     padding-top:10px;
 }
+.cards{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    padding-top:10px;
+    /* box-shadow: 4px 4px 4px solid rgb(29, 26, 26);
+    text-shadow: 3px 3px 3px solid black; */
+}

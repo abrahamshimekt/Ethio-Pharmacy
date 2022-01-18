@@ -20,4 +20,26 @@ header{
 footer{
      background-color: var(--main-color);
  }
+ .img-responsive{
+    width: 100%;
+    height: auto;
+}
+.social-media{
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    
+}
+.icons{
+    padding: .5em;
+    color: rgb(248, 248, 248);
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+.icons:hover{
+    color:rgb(28, 61, 61) ;
+}
+ 
  
