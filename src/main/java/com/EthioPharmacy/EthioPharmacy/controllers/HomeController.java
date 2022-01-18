@@ -2,7 +2,8 @@ package com.EthioPharmacy.EthioPharmacy.controllers;
 
 
 import com.EthioPharmacy.EthioPharmacy.models.Medicine;
-import com.EthioPharmacy.EthioPharmacy.models.MedicineData;
+import com.EthioPharmacy.EthioPharmacy.models.data.MedicineRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -15,18 +16,21 @@ import javax.validation.Valid;
 @RequestMapping(path = "home")
 public class HomeController {
 
+    @Autowired
+    private MedicineRepository medicineRepository;
+
     @GetMapping
     public String showHome(Model model)
     {
         model.addAttribute("title", "OurProducts");
-        model.addAttribute("medicines", MedicineData.getAllMeds());
+        model.addAttribute("medicines", medicineRepository.findAll());
         return "meds/home";
     }
 
     @GetMapping(path = "/add")
     public String displayAddForm(Model model) {
         model.addAttribute("title", "Add Medicine");
-        model.addAttribute( new Medicine());
+        model.addAttribute(  new Medicine());
         return "meds/addMedForm";
     }
 
@@ -40,22 +44,25 @@ public class HomeController {
             model.addAttribute("title", "Add Medicine");
             return "meds/addMedForm";
         }
-        MedicineData.addMed(newMed);
+        medicineRepository.save(newMed);
+
         return "redirect:/home";
     }
 
     @GetMapping("/addedProduct")
     public String showAddedProducts(Model model) {
-        model.addAttribute("medicines", MedicineData.getAllMeds());
+        model.addAttribute("medicines", medicineRepository.findAll());
+        model.addAttribute("selected" , new Medicine());
         return "meds/addedProducts";
     }
 
 
 
     @PostMapping("/addedProduct")
-    public String processRemovedProduct(@RequestParam int[] medIds) {
+    public String processRemovedProduct(  @RequestParam int[] medIds) {
+
         for(int medId : medIds) {
-            MedicineData.removeMed(medId);
+            medicineRepository.deleteById(medId);
         }
         return "redirect:addedProduct";
     }

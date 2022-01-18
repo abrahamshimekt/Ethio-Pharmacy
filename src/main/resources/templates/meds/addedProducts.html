@@ -5,35 +5,35 @@
 
 </head>
 <body class = "bg-light">
-    <div class="container shadow p-3 mb-5 bg-white rounded mt-5">
-        <h1>Added Products</h1>
-        <form method = "post" >
+<div class="container shadow p-3 mb-5 bg-white rounded mt-5">
+    <h1>Added Products</h1>
+    <form method = "post" >
         <table class="table">
             <thead class="table-dark">
-                <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Description</th>
-                    <th></th>
-                    <th></th>
-                </tr>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th></th>
+                <th></th>
+            </tr>
             </thead>
 
             <tbody>
-                <tr th:each = "medicine: ${medicines}">
-                    <td th:text = "${medicine.medName}"></td>
-                    <td th:text = "${medicine.medPrice}"></td>
-                    <td th:text = "${medicine.medDescription}"></td>
+            <tr th:each = "medicine: ${medicines}">
+                <td th:text = "${medicine.medName}"></td>
+                <td th:text = "${medicine.medPrice}"></td>
+                <td th:text = "${medicine.medDescription}"></td>
 
-                     <td>
+                <td>
 
-                            <label th:for = "${medicine.medId}" > <input type = "checkbox" name = "medIds" th:value = "${medicine.medId}" th:id = "${medicine.medId}"/></label>
-                     </td>
-
-
+                    <label th:for = "${medicine.id}" > <input type = "checkbox" name = "medIds" th:value = "${medicine.id}" th:id = "${medicine.id}"/></label>
+                </td>
 
 
-                </tr>
+
+
+            </tr>
 
             </tbody>
             <tfoot>
@@ -41,9 +41,9 @@
             </tfoot>
 
         </table>
-           <input class="btn btn-primary mt-2" type="submit" value="Delete"/>
-        </form>
+        <input class="btn btn-primary mt-2" type="submit" value="Delete"/>
+    </form>
 
-    </div>
+</div>
 </body>
 </html>
