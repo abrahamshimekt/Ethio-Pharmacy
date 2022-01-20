@@ -1,4 +1,4 @@
-package com.EthioPharmacy.EthioPharmacy.models.data;
+package com.EthioPharmacy.EthioPharmacy.models.repository;
 
 import com.EthioPharmacy.EthioPharmacy.models.Medicine;
 import org.springframework.data.repository.CrudRepository;

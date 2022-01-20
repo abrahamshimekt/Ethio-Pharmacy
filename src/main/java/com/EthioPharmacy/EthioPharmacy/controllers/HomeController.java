@@ -2,7 +2,7 @@ package com.EthioPharmacy.EthioPharmacy.controllers;
 
 
 import com.EthioPharmacy.EthioPharmacy.models.Medicine;
-import com.EthioPharmacy.EthioPharmacy.models.data.MedicineRepository;
+import com.EthioPharmacy.EthioPharmacy.models.repository.MedicineRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,7 +13,7 @@ import javax.validation.Valid;
 
 
 @Controller
-@RequestMapping(path = "home")
+@RequestMapping(path = "")
 public class HomeController {
 
     @Autowired
@@ -24,8 +24,10 @@ public class HomeController {
     {
         model.addAttribute("title", "OurProducts");
         model.addAttribute("medicines", medicineRepository.findAll());
-        return "meds/home";
+        return "index";
     }
+
+
 
     @GetMapping(path = "/add")
     public String displayAddForm(Model model) {
@@ -46,7 +48,7 @@ public class HomeController {
         }
         medicineRepository.save(newMed);
 
-        return "redirect:/home";
+        return "redirect:/user";
     }
 
     @GetMapping("/addedProduct")

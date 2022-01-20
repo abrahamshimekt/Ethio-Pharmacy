@@ -5,8 +5,8 @@
     justify-content: flex-end;
 }
 body {
-    background-color: rgba(27, 27, 27);
     font-family: 'Poppins', sans-serif;
+    background: rgba(27, 27, 27, 27);
 }
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-nav .nav-link {
@@ -111,9 +111,6 @@ body {
     background-image: url("/images/med2.jpg");
     background-position-y: 100%;
 }
-.card h5 {
-    color: #a40303;
-}
 
 .add-form {
     display: flex;
@@ -139,6 +136,25 @@ body {
 .erros {
     color: red;
 
+}
+
+.card {
+    border: none;
+    overflow: hidden;
+}
+.card-body {
+    background: #333333;
+    color: white;
+    overflow: hidden;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    color: white;
 }
 
 
