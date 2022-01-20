@@ -1,5 +1,8 @@
 package com.EthioPharmacy.EthioPharmacy.controllers;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import com.EthioPharmacy.EthioPharmacy.models.User;
 
 import org.springframework.stereotype.Controller;
@@ -24,6 +27,12 @@ public class LoginController {
         }
         return "meds/login";
     }
-    }
+    @NotNull
+    @Size(min=5, message="Name must be at least 5 characters long")
+    private String name;
+    // @NotNull
+    // @Size(min=1, message="You must choose at least 1 ingredient")
+    // private List<> ;
+}
     
 
