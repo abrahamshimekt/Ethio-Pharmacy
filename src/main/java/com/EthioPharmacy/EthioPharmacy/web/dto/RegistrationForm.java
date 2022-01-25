@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 @Data
-public class UserRegistrationDto {
+public class RegistrationForm {
     private String firstName;
     private String lastName;
     private String UserName;

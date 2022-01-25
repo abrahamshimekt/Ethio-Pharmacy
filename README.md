@@ -1,5 +1,11 @@
-# ICOG-Abe-and-Bam
 #Ethio-Pharmacy
+#Group Members
+1. Hiwot Derese        UGR/2790/12              3
+2. Bamlaku Hiruy       UGR/4774/12              3
+3. Abraham Shimekt     UGR/0129/12              1
+4. Rut Birhanu         UGR/8243/12              3
+5. Feven Belay         UGR/3979/12              1
+
 # Requirements to run the source code
 1. Use Intellij idea or vs code
 2. JDK version 17
