@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org/">
+<head>
+    <head th:replace="fragments/fragment::head"></head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link th:href="@{/css/home.css}" rel="stylesheet">
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
+    <link th:href="@{/css/styles2.css}" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="fragments/fragment :: header"></div>
+
+<div class="container categories ">
+    <h1>Categories</h1>
+    <div class="row g-3 ">
+        <div  class=" custom col-12 col-md-6 col-lg-3" >
+            <div class="card text-center h-100">
+                <div>
+                    <div class="hovereffect">
+                        <img class="img-responsive" th:src = "@{/images/med1.jpg}" alt="">
+                        <div class="overlay">
+                            <a class="info" th:href="@{/home/habesha}">Habesha</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold card-title">Habesha</h5>
+                    <p  class = "card-text">Buy Habesh Medicines</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="custom col-12 col-md-6 col-lg-3">
+            <div class="card text-center h-100">
+                <div >
+                    <div class="hovereffect">
+                        <img class="img-responsive" th:src = "@{/images/med1.jpg}" alt="">
+                        <div class="overlay">
+
+                            <a class="info" th:href="@{/home/std}">STDs</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body mt-auto">
+                    <h5 class="fw-bold card-title">STDs</h5>
+                    <p  class = "card-text">Buy Antibiotics,Antiviral drugs</p>
+                </div>
+            </div>
+        </div>
+
+        <div class=" custom col-12 col-md-6 col-lg-3" >
+            <div class="card text-center h-100">
+                <div style = "width: 100%; ">
+                    <div class="hovereffect">
+                        <img class="img-responsive" th:src = "@{/images/med2.jpg}" alt="">
+                        <div class="overlay">
+
+                            <a class="info" th:href="@{/home/eyecare}">Eye care</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold card-title">Eye Care</h5>
+                    <p  class = "card-text">Buy Medicines for Eye</p>
+                </div>
+            </div>
+        </div>
+
+        <div class=" custom col-12 col-md-6 col-lg-3 ">
+            <div class="card text-center h-100">
+                <div style = "width: 100%; ">
+                    <div class="hovereffect">
+                        <img class="img-responsive" th:src = "@{/images/med4.jpg}" alt="">
+                        <div class="overlay">
+
+                            <a class="info" th:href="@{/home/diabets}">Diabetes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold card-title">Dibetes</h5>
+                    <p  class = "card-text">Buy medicines for diabetes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments/fragment::footer"></div>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
