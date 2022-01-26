@@ -1,4 +1,4 @@
-# ICOG-Abe-and-Bam
+
 #Ethio-Pharmacy
 # Requirements to run the source code
 1. Use Intellij idea or vs code
