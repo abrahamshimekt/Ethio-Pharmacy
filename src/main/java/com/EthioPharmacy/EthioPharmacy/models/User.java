@@ -1,66 +1,104 @@
 package com.EthioPharmacy.EthioPharmacy.models;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import java.util.HashSet;
-import java.util.Set;
-
+import java.util.Collection;
 //user pojo
-@Entity
-@NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
-@Table(name="User",uniqueConstraints = @UniqueConstraint(columnNames="email"))
+@NoArgsConstructor
+@Entity
+
+@Table(name="User",uniqueConstraints = @UniqueConstraint(columnNames="userName"))
 public class User {
     @Id
-    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(name = "first_name")
-    @NotNull
-    @Size(min=2 ,max=15,message="length should be between 2 and 15")
+    @Column(name ="firstName")
     private String firstName;
-    @Size(min=2 ,max=15,message="length should be between 2 and 15")
-    @Column(name = "last_name")
+    @Column(name = "lastName")
     private String lastName;
-    @NotEmpty(message="Email field shouldn't be empty")
-    @Email(regexp = "^(.+)@(.+)$",message="invalid email")
-    private String email;
+    @Column(name="username")
+    private String userName;
+    private String company;
+    private String address;
+    private  String email;
+    private String phone;
     private String password;
+    @ManyToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+    @JoinTable(name = "users_roles",
+            joinColumns = @JoinColumn(name ="user_id",
+                    referencedColumnName ="id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id",
+                    referencedColumnName="id"))
+    private Collection<Role> roles;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinTable(
-            name = "users_roles",
-            joinColumns = @JoinColumn(
-                    name = "user_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(
-                    name = "role_id", referencedColumnName = "id"))
-
-    private Set<Role> roles= new HashSet<>();
-
-    public User(String firstName, String lastName, String email, String password, Set<Role> roles) {
+    public User(String firstName, String lastName, String userName, String company, String address, String email, String phone, String password, Collection<Role> roles) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.userName = userName;
+        this.company = company;
+        this.address = address;
         this.email = email;
+        this.phone = phone;
         this.password = password;
         this.roles = roles;
     }
 
-    public boolean hasRole(String roleName){
-        for (Role role : this.roles) {
-            if (role.getName().equals(roleName)) {
-                return true;
-            }
-        }
-        return false;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Collection<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Collection<Role> roles) {
+        this.roles = roles;
     }
 }

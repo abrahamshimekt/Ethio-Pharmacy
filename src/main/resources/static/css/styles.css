@@ -1,53 +1,12 @@
-html{
-    --main-color:rgb(46, 150, 136);
-}
-*{
-margin:0px;
-padding:0px;
-box-sizing:border-box;
-
-}
-.home-nav{
-padding:3em 10px 3em 10px;
---main-color:rgb(46, 150, 136);
-height: 20vh;
-}
-#log{
-    margin-left: 3em;
-  margin-right: -3em;
-  font-weight:550;
-}
-.navbar-nav .nav-item a{
-color:	hsl(0,0%,100%);}
-
-.login{
-padding:10px;
-margin:10px;
-justify-content:center;
-width:10%;
-
-}
-.title{
-text-align:center;
-padding:25px 0px;
-}
-.title p{
-font-size:18px;
-}
-.card-body{
-box-shadow: 0 0 20px 7px rgba(0,0,0,0.1);
-}
-.card{
-margin:20px 10px;}
-
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto:wght@300;400&display=swap');
-.navbar{
+
+
+.navbar-collapse {
+    justify-content: flex-end;
 }
 body {
-    background-color:white;
-
     font-family: 'Poppins', sans-serif;
+    background: rgba(27, 27, 27, 27);
 }
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-nav .nav-link {
@@ -73,7 +32,7 @@ body {
     overflow: hidden;
     top: 0;
     left: 0;
-    background-color: rgba(27, 163, 163, 0.856);
+    background-color: rgba(0,0,0,0.6);
     opacity: 0;
     filter: alpha(opacity=0);
     -webkit-transform: translate(460px, -100px) rotate(180deg);
@@ -97,7 +56,7 @@ body {
     position: relative;
     font-size: 17px;
     padding: 10px;
-    background:rgba(27, 163, 163, 0.856) ;
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .hovereffect a.info {
@@ -146,11 +105,11 @@ body {
     transition-delay: 0.3s;
 }
 
-.crs{
-border-bottom:2px solid green;
-}
-.card h5 {
-    color: rgb(38, 231, 173);
+
+.intro {
+    background-size: cover;
+    background-image: url("/images/med2.jpg");
+    background-position-y: 100%;
 }
 
 .add-form {
@@ -164,7 +123,7 @@ border-bottom:2px solid green;
     height: 30vh;
     width: 50%;
     margin :0 auto;
-    color: rgb(250, 165, 165);
+    color: black;
     border: 1px solid #fff;
     display: flex;
     opacity: 0.5;
@@ -173,69 +132,30 @@ border-bottom:2px solid green;
 
 
 }
-.carousel{
-border-bottom:10px solid red;}
-.categories{
-margin-top:7em;
-}
-.custom img {
-    width: 100%;
-    object-fit: cover;
-    aspect-ratio: 1/1;
-}
-.loginbtn img{
-width:20%;
-}
-.loginbtn{
-color:#fff;
-text-decoration:none;
+
+.erros {
+    color: red;
 
 }
-.loginbtn:hover{
-color:#fff;
-}
 
-header{
-     /* background-color: rgba(100, 112, 119, 0.877); */
-     background-color:var(--main-color) ;
- }
-
-footer{
-     background-color: var(--main-color);
- }
-#right{
-    margin-top: -3.7em;
+.card {
+    border: none;
+    overflow: hidden;
 }
- .text{
-    column-count: 3;
-    column-gap: 2em;
-    padding-left: 3em;
- }
- 
-.title{
-    font-weight: bolder;
-    font-style: oblique;
-}
- .img-responsive{
-    width: 100%;
-    height: auto;
-}
-.social-media{
-    display: flex;
-    flex-direction: row;
-    margin-left: -3.5em;
-    padding: 1em;
-    margin-top: -9em;
+.card-body {
+    background: #333333;
+    color: white;
+    overflow: hidden;
 
 }
-.icons{
-    padding: .5em;
-    color: rgb(248, 248, 248);
-    padding: 2em;
-    display: flex;
-    justify-content: center;
+
+a {
     text-decoration: none;
+    color: white;
 }
-.icons:hover{
-    color:rgb(28, 61, 61) ;
+a:hover {
+    color: white;
 }
+
+
+
