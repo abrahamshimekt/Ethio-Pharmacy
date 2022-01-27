@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/fragment::head"></div>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+<div th:replace="fragments/fragment::login-signin"></div>
+
+
+                            <div class="card-body p-md-5 text-black">
+                                <h3 class="mb-5 text-uppercase">Sign Up</h3>
+                                <div th:if="${param.success}">      
+                                 <div class="alert alert-info">You've successfully registered</div>
+                                </div>
+                                <form th:action="@{/signup}" method="post" class="needs-validation" th:object="${user}" novalidate>
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <label class="control-label" for="firstName"> First Name </label>
+                                            <input id="firstName" class="form-control" th:field="*{firstName}" required autofocus="autofocus" />
+                                            <p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></p>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <label class="control-label" for="lastName"> Last Name </label>
+                                            <input id="lastName" class="form-control" th:field="*{lastName}" required autofocus="autofocus" />
+                                            <p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <label class="control-label" for="email"> Email </label>
+                                            <input id="email" class="form-control" th:field="*{email}" required autofocus="autofocus" />
+                                            <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <label class="control-label" for="password"> Password </label>
+                                            <input id="password" class="form-control" th:field="*{password}"type ="password" required autofocus="autofocus" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-end pt-3">
+                                    <button type="submit" class="btn btn-success">Register</button>
+                                    <span>Already registered? <a href="/" th:href="@{/login}">Login here</a></span>
+                                        </div>
+                </form>
+                </div>
+
+
+
+    <div th:replace="fragments/fragment::footer"></div>
+     <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

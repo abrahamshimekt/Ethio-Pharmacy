@@ -1,13 +1,20 @@
 package com.EthioPharmacy.EthioPharmacy.models;
 
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class Medicine {
     @Id
@@ -15,18 +22,23 @@ public class Medicine {
     @Column(name = "id", nullable = false)
     private int id;
 
-    @NotNull
+    @NotBlank(message = "")
     @Size(min = 3, max = 15, message = "Enter a valid name")
-    private   String medName;
+    private String medName;
+    @NotBlank(message = "")
     @Pattern(regexp = "^[$][0-9]+$", message = "Enter a valid price")
-    private   String medPrice;
-    @NotNull
-    @Size(min = 1, message = "Enter a valid description")
-    private   String medDescription;
-    private String photos;
+    private  String medPrice;
+    @NotBlank(message = "")
+    @Size(min = 5, message = "Enter a valid description")
+    private String medDescription;
+    @Lob
+    @Column (columnDefinition = "MEDIUMBLOB")
+    private String medImage;
+    @ManyToOne
+    private Catagory catagory;
+    @ManyToOne
+    private MedicineOrder medicineOrder;
 
 
-    public Medicine() {
 
-    }
 }
