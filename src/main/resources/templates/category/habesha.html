@@ -33,33 +33,33 @@
                     <h5 th:text = "${habesha.medName}" class="fw-bold card-title">Card title</h5>
                     <h4 th:text = "${habesha.medPrice}" class = "fw-bold"></h4>
                     <p  th:text = "${habesha.medDescription}" class = "card-text">Some make up the bulk of the card's content.</p>
-                    <a type="submit" data-toggle="modal" th:attr = "data-target='#exampleModalCenter' + *{habesha.id}" class="btn btn-primary btn-sm">Add to Cart</a>
+                    <a th:href="@{/userdashboard}" class="btn btn-primary btn-sm">Add to Cart</a>
                 </div>
                 
-                <div class="modal fade" th:id="*{'exampleModalCenter' + {habesha.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLongTitle">Add medicine</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                              </button>
-                          </div>
-                          <div class="modal-body">
-                              <div class="card">
-                                  <img class="card-img-top" th:src="*{'data:image/jpg;base64,' + {habesha.medImage}}" alt="Card image cap">
-                                  <div class="card-body">
-                                      <form action="/addMedToCart" method = "post">
-                                          <input type="hidden" disabled = disabled name = "id" th:value = "*{habesha.id}">
-                                          <input class = "form-control" name = "quantity" type = "number">
-                                          <button class = "btn btn-primary mt-3" type = "submit" >Submit</button>
-                                      </form>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+<!--                <div class="modal fade" th:id="*{'exampleModalCenter' + {habesha.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">-->
+<!--                  <div class="modal-dialog modal-dialog-centered" role="document">-->
+<!--                      <div class="modal-content">-->
+<!--                          <div class="modal-header">-->
+<!--                              <h5 class="modal-title" id="exampleModalLongTitle">Add medicine</h5>-->
+<!--                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                                  <span aria-hidden="true">&times;</span>-->
+<!--                              </button>-->
+<!--                          </div>-->
+<!--                          <div class="modal-body">-->
+<!--                              <div class="card">-->
+<!--                                  <img class="card-img-top" th:src="*{'data:image/jpg;base64,' + {habesha.medImage}}" alt="Card image cap">-->
+<!--                                  <div class="card-body">-->
+<!--                                      <form action="/addMedToCart" method = "post">-->
+<!--                                          <input type="hidden" disabled = disabled name = "id" th:value = "*{habesha.id}">-->
+<!--                                          <input class = "form-control" name = "quantity" type = "number">-->
+<!--                                          <button class = "btn btn-primary mt-3" type = "submit" >Submit</button>-->
+<!--                                      </form>-->
+<!--                                  </div>-->
+<!--                              </div>-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                  </div>-->
+<!--              </div>-->
 
 
           </div>

@@ -22,7 +22,7 @@
             <div class="card-body">
                 <form method="POST" th:object="${medicine}" enctype="multipart/form-data">
                     <div class="form-row">
-                        <label for = "medName" class="name">Medicine name</label>
+                        <label th:for = "medName" class="name">Medicine name</label>
                         <div class="value">
                             <div class="input-group">
                                 <input th:field="*{medName}"  class="input--style-5" type="text" placeholder=" medicine Name">
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <label for = "medPrice" class="name">Medicine Price</label>
+                        <label th:for = "medPrice" class="name">Medicine Price</label>
                         <div class="value">
                             <div class="input-group">
                                 <input th:field="*{medPrice}" class="input--style-5" type="text" placeholder="price: example $12">
@@ -46,7 +46,7 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <label for = "medDescription" class="name">Medicine description</label>
+                        <label th:for = "medDescription" class="name">Medicine description</label>
                         <div class="value">
                             <div class="input-group">
                                 <input th:field="*{medDescription}" class="input--style-5" type="text"  placeholder=" medicine description">
